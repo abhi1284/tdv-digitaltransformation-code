@@ -1,0 +1,251 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:16c9f22d-c986-4a9b-895d-c52704912763 -->
+<metadata name="vwAsmOrderShippingDetails" path="/shared/DigitalTransformation/App_01/2.BusinessLayer/2.2.Assemble/vwAsmOrderShippingDetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="productname" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="leadtime" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="quantity" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="status" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="orderdate" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shipname" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shipaddress" nullable="true">
+      <datatype type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shipcity" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shippostalcode" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shipcountry" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shipdate" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="shippingmethod" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Phone_number" nullable="true">
+      <datatype type="STRING" maxLength="32767"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="digitaltransformation" domain="composite" privileges="WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+  </security>
+  <dependency target="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_Inventory/tutorial/products" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="productid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="productname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="productdescription">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="categoryid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="serialnumber">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="reorderlevel">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="leadtime">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_Orders/tutorial/orderdetails" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="orderdetailid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="productid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="quantity">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="unitprice">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+      <element name="status">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="discount">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_Orders/tutorial/orders" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="orderid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="customerid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="employeeid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="purchaseordernumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="shipcity">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipstateorprovince">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shippostalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="shipcountry">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipphonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethodid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="freightcharge">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_Orders/tutorial/shippingmethods" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="shippingmethodid" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="shippingmethod">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_shippingContactDetails/Shipping_Contact_Details.xlsx/Sheet1" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Company_name">
+        <datatype type="STRING" maxLength="32767"/>
+      </element>
+      <element name="Phone_number">
+        <datatype type="STRING" maxLength="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    products.productname, 
+    products.leadtime, 
+    orderdetails.quantity, 
+    orderdetails.status, 
+    orders.orderdate, 
+    orders.shipname, 
+    orders.shipaddress, 
+    orders.shipcity, 
+    orders.shippostalcode, 
+    orders.shipcountry, 
+    orders.shipdate, 
+    shippingmethods.shippingmethod, 
+    Sheet1.Phone_number
+FROM      
+    /shared/DigitalTransformation/App_01/&quot;1.PhysicalLayer&quot;/ds_Inventory/tutorial/products products INNER JOIN 
+        /shared/DigitalTransformation/App_01/&quot;1.PhysicalLayer&quot;/ds_Orders/tutorial/orderdetails orderdetails INNER JOIN 
+            /shared/DigitalTransformation/App_01/&quot;1.PhysicalLayer&quot;/ds_Orders/tutorial/orders orders
+        ON orderdetails.orderid = orders.orderid
+    ON orderdetails.productid = products.productid INNER JOIN 
+        /shared/DigitalTransformation/App_01/&quot;1.PhysicalLayer&quot;/ds_Orders/tutorial/shippingmethods shippingmethods INNER JOIN 
+            /shared/DigitalTransformation/App_01/&quot;1.PhysicalLayer&quot;/ds_shippingContactDetails/&quot;Shipping_Contact_Details.xlsx&quot;/Sheet1 Sheet1
+        ON shippingmethods.shippingmethod = Sheet1.Company_name
+    ON orders.shippingmethodid = shippingmethods.shippingmethodid</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Demo_01/Cache/ds_Cache/ciscache/cstracking</attribute>
+  <attribute name="creationDate" type="LONG">1578304737896</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596711136681</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAkQUQYBAAYAbwByAGQAZQByAHMGAgAGAG8AcgBkAGUAcgBzAwv/////Awr/////Awz/////CxEABwAGAHMAaABhAHIAZQBkABUARABpAGcAaQB0AGEAbABUAHIAYQBuAHMAZgBvAHIAbQBhAHQAaQBvAG4ABgBBAHAAcABfADAAMQAPADEALgBQAGgAeQBzAGkAYwBhAGwATABhAHkAZQByAAkAZABzAF8ATwByAGQAZQByAHMACAB0AHUAdABvAHIAaQBhAGwABgBvAHIAZABlAHIAc///EFEGAQAGAFMAaABlAGUAdAAxBgIABgBTAGgAZQBlAHQAMQML/////wMK/////wMM/////wsRAAcABgBzAGgAYQByAGUAZAAVAEQAaQBnAGkAdABhAGwAVAByAGEAbgBzAGYAbwByAG0AYQB0AGkAbwBuAAYAQQBwAHAAXwAwADEADwAxAC4AUABoAHkAcwBpAGMAYQBsAEwAYQB5AGUAcgAZAGQAcwBfAHMAaABpAHAAcABpAG4AZwBDAG8AbgB0AGEAYwB0AEQAZQB0AGEAaQBsAHMAHQBTAGgAaQBwAHAAaQBuAGcAXwBDAG8AbgB0AGEAYwB0AF8ARABlAHQAYQBpAGwAcwAuAHgAbABzAHgABgBTAGgAZQBlAHQAMf//EFEGAQAIAHAAcgBvAGQAdQBjAHQAcwYCAAgAcAByAG8AZAB1AGMAdABzAwv/////Awr/////Awz/////CxEABwAGAHMAaABhAHIAZQBkABUARABpAGcAaQB0AGEAbABUAHIAYQBuAHMAZgBvAHIAbQBhAHQAaQBvAG4ABgBBAHAAcABfADAAMQAPADEALgBQAGgAeQBzAGkAYwBhAGwATABhAHkAZQByAAwAZABzAF8ASQBuAHYAZQBuAHQAbwByAHkACAB0AHUAdABvAHIAaQBhAGwACABwAHIAbwBkAHUAYwB0AHP//xBRBgEADABvAHIAZABlAHIAZABlAHQAYQBpAGwAcwYCAAwAbwByAGQAZQByAGQAZQB0AGEAaQBsAHMDC/////8DCv////8DDP////8LEQAHAAYAcwBoAGEAcgBlAGQAFQBEAGkAZwBpAHQAYQBsAFQAcgBhAG4AcwBmAG8AcgBtAGEAdABpAG8AbgAGAEEAcABwAF8AMAAxAA8AMQAuAFAAaAB5AHMAaQBjAGEAbABMAGEAeQBlAHIACQBkAHMAXwBPAHIAZABlAHIAcwAIAHQAdQB0AG8AcgBpAGEAbAAMAG8AcgBkAGUAcgBkAGUAdABhAGkAbABz//8QUQYBAA8AcwBoAGkAcABwAGkAbgBnAG0AZQB0AGgAbwBkAHMGAgAPAHMAaABpAHAAcABpAG4AZwBtAGUAdABoAG8AZABzAwv/////Awr/////Awz/////CxEABwAGAHMAaABhAHIAZQBkABUARABpAGcAaQB0AGEAbABUAHIAYQBuAHMAZgBvAHIAbQBhAHQAaQBvAG4ABgBBAHAAcABfADAAMQAPADEALgBQAGgAeQBzAGkAYwBhAGwATABhAHkAZQByAAkAZABzAF8ATwByAGQAZQByAHMACAB0AHUAdABvAHIAaQBhAGwADwBzAGgAaQBwAHAAaQBuAGcAbQBlAHQAaABvAGQAc///EFMGCQAFAEkATgBOAEUAUgMNAAAAAwMOAAAAAAgPEGIGBwABAD0BBQAIAxBBBgEABwBvAHIAZABlAHIAaQBkBgIAAAYD//8GBP//Awr/////AwsAAAAD//8IBBBBBgEABwBvAHIAZABlAHIAaQBkBgIAAAYD//8GBP//Awr/////AwsAAAAA////////EFMGCQAFAEkATgBOAEUAUgMNAAAAAgMOAAAABQgPEGIGBwABAD0BBQAIAxBBBgEACQBwAHIAbwBkAHUAYwB0AGkAZAYCAAAGA///BgT//wMK/////wMLAAAAA///CAQQQQYBAAkAcAByAG8AZAB1AGMAdABpAGQGAgAABgP//wYE//8DCv////8DCwAAAAL///////8QUwYJAAUASQBOAE4ARQBSAw0AAAAEAw4AAAABCA8QYgYHAAEAPQEFAAgDEEEGAQAOAHMAaABpAHAAcABpAG4AZwBtAGUAdABoAG8AZAYCAAAGA///BgT//wMK/////wMLAAAABP//CAQQQQYBAAwAQwBvAG0AcABhAG4AeQBfAG4AYQBtAGUGAgAABgP//wYE//8DCv////8DCwAAAAH///////8QUwYJAAUASQBOAE4ARQBSAw0AAAAGAw4AAAAHCA8QYgYHAAEAPQEFAAgDEEEGAQAQAHMAaABpAHAAcABpAG4AZwBtAGUAdABoAG8AZABpAGQGAgAABgP//wYE//8DCv////8DCwAAAAD//wgEEEEGAQAQAHMAaABpAHAAcABpAG4AZwBtAGUAdABoAG8AZABpAGQGAgAABgP//wYE//8DCv////8DCwAAAAT///////8DBQAAAAQIAhAxBgH//wECAQEGAAEDAAEEAAEFAAMHAAAAAAcJAAAAAQAAAAgJCgAAAA0QQQYBAAsAcAByAG8AZAB1AGMAdABuAGEAbQBlBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADUAMAApAysAAAAPAxIAAAABBAQAAAAAAAAAMgETAf//AwsAAAAC//8QQQYBAAgAbABlAGEAZAB0AGkAbQBlBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADMAMAApAysAAAAPAxIAAAABBAQAAAAAAAAAHgETAf//AwsAAAAC//8QQQYBAAgAcQB1AGEAbgB0AGkAdAB5BgIAAAYD//8GBP//Awr/////CAwQGQYCAAQAaQBuAHQANAYDAAQAaQBuAHQANAMrAAAADwMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAP//xBBBgEABgBzAHQAYQB0AHUAcwYCAAAGA///BgT//wMK/////wgMEBsGAgAHAHYAYQByAGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIBEwH//wMLAAAAA///EEEGAQAJAG8AcgBkAGUAcgBkAGEAdABlBgIAAAYD//8GBP//Awr/////CAwQFQYCAAQAZABhAHQAZQYDAAQAZABhAHQAZQMrAAAADwMSAAAAAf//AwsAAAAA//8QQQYBAAgAcwBoAGkAcABuAGEAbQBlBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADUAMAApAysAAAAPAxIAAAABBAQAAAAAAAAAMgETAf//AwsAAAAA//8QQQYBAAsAcwBoAGkAcABhAGQAZAByAGUAcwBzBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAwAdgBhAHIAYwBoAGEAcgAoADIANQA1ACkDKwAAAA8DEgAAAAEEBAAAAAAAAAD/ARMB//8DCwAAAAD//xBBBgEACABzAGgAaQBwAGMAaQB0AHkGAgAABgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgANQAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAAyARMB//8DCwAAAAD//xBBBgEADgBzAGgAaQBwAHAAbwBzAHQAYQBsAGMAbwBkAGUGAgAABgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgAMgAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAAUARMB//8DCwAAAAD//xBBBgEACwBzAGgAaQBwAGMAbwB1AG4AdAByAHkGAgAABgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgANQAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAAyARMB//8DCwAAAAD//xBBBgEACABzAGgAaQBwAGQAYQB0AGUGAgAABgP//wYE//8DCv////8IDBAVBgIABABkAGEAdABlBgMABABkAGEAdABlAysAAAAPAxIAAAAB//8DCwAAAAD//xBBBgEADgBzAGgAaQBwAHAAaQBuAGcAbQBlAHQAaABvAGQGAgAABgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgAMgAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAAUARMB//8DCwAAAAT//xBBBgEADABQAGgAbwBuAGUAXwBuAHUAbQBiAGUAcgYCAAAGA///BgT//wMK/////wgMEBsGAgAHAFYAQQBSAEMASABBAFIDEgAAAAEEBAAAAAAAAH//ARMB//8DCwAAAAH/////CQYAAAAJEIIDCgAAADgDCwAAACQDDAAAAMgDDQAAAMj//xCCAwoAAAFwAwsAAAEcAwwAAADIAw0AAABC//8QggMKAAAChgMLAAAANgMMAAAAyAMNAAAAov//EIIDCgAAAVADCwAAACEDDAAAAMgDDQAAAJL//xCCAwoAAABPAwsAAAEVAwwAAADIAw0AAABl//8QggMK/////wML/////wMM/////wMN////////EIIDCv////8DC/////8DDP////8DDf///////xCCAwr/////Awv/////Awz/////Aw3///////8QggMK/////wML/////wMM/////wMN////////CAMQcQMBAAAACwMCAAAAMgkDAAACJhB0AwYAAAAA//8QcgYE/////xBzAwUAAAAC//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAH//xByBgT/////EHMDBQAAAAL//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAAAv//EHIGBP////8QcwMFAAAAA///EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAD//8QcgYE/////xBzAwUAAAAD//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAT//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAABf//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAG//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAf//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAACP//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAJ//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAr//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAAC///EHIGBP////8QcwMFAAAABP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAM//8QcgYE/////xBzAwUAAAAB//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2////////</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1578304737896</attribute>
+</metadata>

@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:16c9f22d-c986-4a9b-895d-c52704912763 -->
+<metadata name="Shipping_Contact_Details.xlsx" path="/shared/DigitalTransformation/App_01/1.PhysicalLayer/ds_shippingContactDetails/Shipping_Contact_Details.xlsx" type="CONTAINER" subtype="DIRECTORY" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="digitaltransformation" domain="composite" privileges="WRITE EXECUTE SELECT UPDATE INSERT DELETE GRANT"/>
+  </security>
+  <attribute name="autoAddChildren" type="BOOLEAN">true</attribute>
+  <attribute name="blankAsNull" type="BOOLEAN">true</attribute>
+  <attribute name="blankColumnType" type="STRING">Varchar</attribute>
+  <attribute name="charset" type="STRING">utf-8</attribute>
+  <attribute name="creationDate" type="LONG">1578304666334</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="dataRange" type="STRING">A1</attribute>
+  <attribute name="dataWysiwyg" type="BOOLEAN">true</attribute>
+  <attribute name="firstRowCategory" type="BOOLEAN">true</attribute>
+  <attribute name="hasHeaders" type="BOOLEAN">true</attribute>
+  <attribute name="ignoreInvalidateDataFetch" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596711136681</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="path" type="STRING">Shipping_Contact_Details.xlsx</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1578304666334</attribute>
+  <attribute name="userDeletedSet" type="SET"></attribute>
+</metadata>
