@@ -1,0 +1,65 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:5e56a2a6-4e55-4c65-b18d-46285cd94000 -->
+<metadata name="vwPubOrderShippingDetails" path="/services/databases/DigitalTransformation/App_01/vwPubOrderShippingDetails" type="LINK" subtype="NONE" changeToken="0" virtual="true">
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="digitaltransformation" domain="composite" privileges="WRITE GRANT"/>
+  </security>
+  <dependency target="/shared/DigitalTransformation/App_01/2.BusinessLayer/2.3.Publish/vwPubOrderShippingDetails" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="productname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="leadtime">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="quantity">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="status">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shipname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="shipcity">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shippostalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="shipcountry">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethod">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Phone_number">
+        <datatype type="STRING" maxLength="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="creationDate" type="LONG">1596638525744</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596711169004</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1596638525744</attribute>
+  <attribute name="targetPath" type="STRING">/shared/DigitalTransformation/App_01/2.BusinessLayer/2.3.Publish/vwPubOrderShippingDetails</attribute>
+  <attribute name="targetType" type="SHORT">2</attribute>
+</metadata>
