@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:2dfc32ac-6001-4b14-b362-ea70c0d727ca -->
+<metadata name="App_02" path="/services/databases/DigitalTransformation/App_02" type="CONTAINER" subtype="SCHEMA" changeToken="0" virtual="true">
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="digitaltransformation" domain="composite" privileges="WRITE EXECUTE SELECT UPDATE INSERT DELETE GRANT"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1596788946573</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596788946573</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1596788946573</attribute>
+</metadata>
